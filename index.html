@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaHub | Modern Collaboration Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen">
+    <!-- Animated Circle Threads Background -->
+    <div id="circleThreads"></div>
+    
+    <!-- Main Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-16 relative">
+            <div class="flex items-center">
+                <div class="nova-logo mr-3"></div>
+                <h1 class="text-2xl font-bold gradient-text">NovaHub</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-300 hover:text-white transition duration-300 scroll-link">Features</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition duration-300 scroll-link">About</a>
+                <a href="#waitlist" class="text-gray-300 hover:text-white transition duration-300 scroll-link">Get Updates</a>
+            </nav>
+            <button id="mobileMenuButton" class="md:hidden text-gray-300 hover:text-white">
+                <i class="fas fa-rocket text-2xl"></i>
+            </button>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a href="#features" class="text-gray-300 hover:text-white transition duration-300 py-2 scroll-link">Features</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition duration-300 py-2 scroll-link">About</a>
+                    <a href="#waitlist" class="text-gray-300 hover:text-white transition duration-300 py-2 scroll-link">Get Updates</a>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="mb-24 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                <span class="gradient-text">Connect & Collaborate</span> in a modern workspace
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+                NovaHub is your all-in-one platform for seamless teamwork, communication, and productivity—wherever you are.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#waitlist" class="px-8 py-4 rounded-lg font-medium btn-hover text-white scroll-link">
+                    Get Updates <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#features" class="px-8 py-4 rounded-lg font-medium border border-gray-700 hover:border-cyan-400 text-white transition duration-300 scroll-link">
+                    Learn More
+                </a>
+            </div>
+        </section>
+        
+        <!-- Features Section with Tabs -->
+        <section id="features" class="mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 gradient-text">Work Smarter, Together</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+                A flexible platform for teams, freelancers, and creators to organize, share, and achieve more.
+            </p>
+            
+            <!-- Tab Navigation -->
+            <div class="flex justify-center mb-8 border-b border-gray-800">
+                <div class="flex space-x-1">
+                    <button class="tab-button active" data-tab="tab-1">Team Spaces</button>
+                    <button class="tab-button" data-tab="tab-2">File Sharing</button>
+                    <button class="tab-button" data-tab="tab-3">Productivity Tools</button>
+                    <button class="tab-button" data-tab="tab-4">Community</button>
+                </div>
+            </div>
+            
+            <!-- Tab Content -->
+            <div class="tab-content active" id="tab-1">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Organized Team Spaces</h3>
+                        <p class="text-gray-300 mb-6">
+                            Create dedicated spaces for your teams or projects. Manage members, set roles, and keep everything organized in one place.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-cyan-400 mt-1 mr-2"></i>
+                                <span>Customizable team workspaces</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-cyan-400 mt-1 mr-2"></i>
+                                <span>Role-based access control</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-cyan-400 mt-1 mr-2"></i>
+                                <span>Easy member invites</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-card p-8 rounded-xl h-full">
+                        <div class="w-full h-64 bg-gradient-to-br from-cyan-500/10 to-pink-500/10 rounded-xl flex items-center justify-center">
+                            <div class="relative w-48 h-48">
+                                <div class="absolute inset-0 rounded-full border-2 border-cyan-400 border-t-transparent border-r-transparent transform -rotate-45 animate-spin" style="animation-duration: 8s;"></div>
+                                <div class="absolute inset-6 rounded-full border-2 border-pink-500 border-bottom-color: transparent border-left-color: transparent transform rotate-45 animate-spin" style="animation-duration: 6s; animation-direction: reverse;"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i class="fas fa-people-group text-5xl text-white opacity-30"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tab-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Secure File Sharing</h3>
+                        <p class="text-gray-300 mb-6">
+                            Share documents, images, and resources with your team securely. Organize files in folders and control who can view or edit.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Encrypted file storage</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Folder organization</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Granular sharing permissions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                                <span>Version history</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-card p-8 rounded-xl h-full">
+                        <div class="w-full h-64 bg-gradient-to-br from-pink-500/10 to-cyan-500/10 rounded-xl flex items-center justify-center">
+                            <div class="relative w-48 h-48">
+                                <div class="absolute inset-0 rounded-full border-2 border-pink-500 border-bottom-color: transparent border-left-color: transparent transform rotate-45 animate-spin" style="animation-duration: 6s;"></div>
+                                <div class="absolute inset-6 rounded-full border-2 border-cyan-400 border-top-color: transparent border-right-color: transparent transform -rotate-45 animate-spin" style="animation-duration: 8s; animation-direction: reverse;"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i class="fas fa-folder-open text-5xl text-white opacity-30"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tab-3">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Integrated Productivity Tools</h3>
+                        <p class="text-gray-300 mb-6">
+                            Stay on top of your work with built-in task lists, notes, and calendar integrations. Everything you need to keep your team moving forward.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                                <span>Task lists and reminders</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                                <span>Collaborative notes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                                <span>Calendar sync</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                                <span>Progress tracking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                                <span>Team chat</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-card p-8 rounded-xl h-full">
+                        <div class="w-full h-64 bg-gradient-to-br from-purple-500/10 to-cyan-500/10 rounded-xl flex items-center justify-center">
+                            <div class="relative w-48 h-48">
+                                <div class="absolute inset-0 rounded-full border-2 border-purple-500 border-top-color: transparent border-right-color: transparent transform -rotate-30 animate-spin" style="animation-duration: 7s;"></div>
+                                <div class="absolute inset-6 rounded-full border-2 border-cyan-400 border-bottom-color: transparent border-left-color: transparent transform rotate-60 animate-spin" style="animation-duration: 9s; animation-direction: reverse;"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i class="fas fa-list-check text-5xl text-white opacity-30"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tab-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Vibrant Community</h3>
+                        <p class="text-gray-300 mb-6">
+                            Connect with other users, join discussions, and share your knowledge. NovaHub brings people together to learn and grow.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Topic-based forums</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Community events</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Mentorship opportunities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Project showcases</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <span>Collaboration challenges</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-card p-8 rounded-xl h-full">
+                        <div class="w-full h-64 bg-gradient-to-br from-green-500/10 to-cyan-500/10 rounded-xl flex items-center justify-center">
+                            <div class="relative w-48 h-48">
+                                <div class="absolute inset-0 rounded-full border-2 border-green-500 border-bottom-color: transparent border-left-color: transparent transform rotate-60 animate-spin" style="animation-duration: 8s;"></div>
+                                <div class="absolute inset-6 rounded-full border-2 border-cyan-400 border-top-color: transparent border-right-color: transparent transform -rotate-45 animate-spin" style="animation-duration: 10s; animation-direction: reverse;"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i class="fas fa-comments text-5xl text-white opacity-30"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="mb-24">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">About NovaHub</h2>
+                    <p class="text-gray-300 mb-6">
+                        NovaHub is a modern platform designed to help teams and individuals collaborate efficiently, no matter where they are. 
+                        Our mission is to simplify teamwork and empower productivity.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        With intuitive tools and a vibrant community, NovaHub is your digital headquarters for getting things done—together.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon text-gray-400 hover:text-cyan-400 text-xl">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon text-gray-400 hover:text-cyan-400 text-xl">
+                            <i class="fab fa-slack"></i>
+                        </a>
+                        <a href="#" class="social-icon text-gray-400 hover:text-cyan-400 text-xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <div class="relative w-full h-96 bg-gradient-to-br from-cyan-500/10 to-pink-500/10 rounded-2xl overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="relative w-64 h-64">
+                                <!-- Animated nova logo visualization -->
+                                <div class="absolute inset-0 rounded-full border-2 border-cyan-400 border-top-color: transparent border-right-color: transparent transform -rotate-45 animate-spin" style="animation-duration: 8s;"></div>
+                                <div class="absolute inset-8 rounded-full border-2 border-pink-500 border-bottom-color: transparent border-left-color: transparent transform rotate-45 animate-spin" style="animation-duration: 6s; animation-direction: reverse;"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i class="fas fa-rocket text-7xl text-cyan-400 opacity-30"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Waitlist Section -->
+        <section id="waitlist" class="mb-24 gradient-border p-0.5 rounded-xl">
+            <div class="bg-gray-900 rounded-xl p-8 md:p-12">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Stay in the Loop</h2>
+                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                        Sign up to get early updates about NovaHub. We’ll let you know when we launch!
+                    </p>
+                    
+                    <form class="max-w-md mx-auto">
+                        <div class="mb-4">
+                            <input type="text" placeholder="Your Name" class="w-full px-5 py-3 rounded-lg input-field text-white">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" placeholder="Email Address" class="w-full px-5 py-3 rounded-lg input-field text-white">
+                        </div>
+                        <div class="mb-4 custom-select">
+                            <select class="w-full px-5 py-3 rounded-lg input-field text-white">
+                                <option value="" disabled selected>How do you plan to use NovaHub?</option>
+                                <option>Team Collaboration</option>
+                                <option>Freelancing</option>
+                                <option>Personal Projects</option>
+                                <option>Community Building</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full px-8 py-4 rounded-lg font-medium btn-hover text-white pulse">
+                            Notify Me <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                    
+                    <p class="text-gray-400 text-sm mt-6">
+                        We respect your privacy. Your information will never be shared.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="border-t border-gray-800 pt-12 pb-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <div class="nova-logo mr-3"></div>
+                    <h1 class="text-xl font-bold gradient-text">NovaHub</h1>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Contact</a>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="social-icon text-gray-400 text-xl">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon text-gray-400 text-xl">
+                        <i class="fab fa-slack"></i>
+                    </a>
+                    <a href="#" class="social-icon text-gray-400 text-xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <p class="text-center text-gray-500 text-sm mt-8">
+                &copy; 2025 NovaHub. All rights reserved.
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
